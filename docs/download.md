@@ -21,7 +21,7 @@ You can download the dataset from the following [link](https://drive.google.com/
 
 Inside each object dataset folder you will find everything except the test dataset that is kept private.
 
-The json files have the same structure and the camera have the same format of the original NeRF synthetic dataset.
+The json files have the same structure and the camera have the same format as the original NeRF synthetic dataset.
 
 | **Name**             | **Description**                                                                                                         |
 | `train_images`       | The training dataset containing 1000 images                                                                             |
