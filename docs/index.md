@@ -208,5 +208,17 @@ If you use this dataset in your research, please cite the following paper:
 <br>
 <div class="myWrapper" align="left" markdown="1">
 
+## Submit Your Results
+
+Send us your results on the private test set so we can add your method to our leaderboard!
+
+To do so, send an e-mail to **info@eyecan.ai** with subject "Scannerf results submission" and the following info:
+
+- The **name**/s of your method/s.
+- A link to a published **paper** describing it/them.
+- A download link with your results for every proposed method, with rendered images for every test set sample. We will compute metrics on those images.
+
+Feel free to ask us any questions!
+
 </div>
 </div>
