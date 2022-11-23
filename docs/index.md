@@ -109,40 +109,97 @@ If you use this dataset in your research, please cite the following paper:
 # LEADERBOARDS
 
 <div class="hero" id="leaderboard" markdown="1">
+
+### EVENLY DISTRIBUTED SPLITS
+
+<div class="hero" id="leaderboard" markdown="1">
 <div style="overflow-x: scroll;">
-<table>
-
+<table class="table table-header-rotated">
     <tr>
-        <td style="border-bottom: none">&nbsp;</td>
-        {% for method in site.data.leaderboard %}
-            <td colspan="4" style="text-align: center; border-bottom: none;"><b>{{method.name}}</b></td>
+        <td style=""><div><span>&nbsp;</span></div></td>
+        <td style=""><div><span>&nbsp;</span></div></td>
+        <!-- <td style="text-align: center; border-left: 1px solid #dbdbdb;"><div><span><b>average</b></span></div></td> -->
+        <td style="text-align: center; vertical-align: bottom; height: 110px; white-space: nowrap; padding: 0 !important;"><div style="transform: translate(10px, -10px) rotate(310deg); width: 30px;"><span style="padding: 5px 10px;"><b>average</b></span></div></td>
+        <!-- <td style="text-align: center; border-left: 1px solid #dbdbdb; transform-origin: bottom left; transform: translateX(20%) rotate(-45deg);"><b>average</b></td> -->
+        {% for object in site.data.objects %}
+            <td style="text-align: center; vertical-align: bottom; border-left: none; height: 110px; white-space: nowrap; padding: 0 !important;"><div style="transform: translate(10px, -10px) rotate(310deg); width: 30px;"><span style="padding: 5px 10px;"><b>{{object}}</b></span></div></td>
+            <!-- <td style="text-align: center; border-left: none; transform-origin: bottom left; transform: translateX(20%) rotate(-45deg);"><b>{{object}}</b></td> -->
+            <!-- <td style="text-align: center; border-left: none; transform-origin: center; transform: rotate(-45deg);"><b>{{object}}</b></td> -->
         {% endfor %}
     </tr>
-
-    <tr>
-        <td>&nbsp;</td>
-        {% for method in site.data.leaderboard %}
-            <td style="border-left: 1px solid #dbdbdb;"><b>Split 1000</b></td>
-            <td><b>Split 500</b></td>
-            <td><b>Split 250</b></td>
-            <td style="border-right: 1px solid #dbdbdb;"><b>Split 100</b></td>
-        {% endfor %}
-    </tr>
-
-    {% for object in site.data.objects %}
+    {% for method in site.data.leaderboard %}
         <tr>
-            <td style="border-right: 1px solid #dbdbdb;"><b>{{object}}</b></td>
-            {% for method in site.data.leaderboard %}
-                <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{method.split_1000[forloop.parentloop.index0]}}</td>
-                <td style="text-align: center;">{{method.split_500[forloop.parentloop.index0]}}</td>
-                <td style="text-align: center;">{{method.split_250[forloop.parentloop.index0]}}</td>
-                <td style="text-align: center; border-right: 1px solid #dbdbdb;">{{method.split_100[forloop.parentloop.index0]}}</td>
+            <td rowspan="4" style="vertical-align: middle;"><b>{{method.name}}</b></td>
+            <td style="white-space: nowrap;"><b>Train 1000</b></td>
+            <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{method.split_1000_avg}}</td>
+            {% for object in site.data.objects %}
+                <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{method.split_1000[forloop.index0]}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td style="white-space: nowrap;"><b>Train 500</b></td>
+            <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{method.split_500_avg}}</td>
+            {% for object in site.data.objects %}
+                <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{method.split_500[forloop.index0]}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td style="white-space: nowrap;"><b>Train 250</b></td>
+            <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{method.split_250_avg}}</td>
+            {% for object in site.data.objects %}
+                <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{method.split_250[forloop.index0]}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td style="white-space: nowrap;"><b>Train 100</b></td>
+            <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{method.split_100_avg}}</td>
+            {% for object in site.data.objects %}
+                <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{method.split_100[forloop.index0]}}</td>
             {% endfor %}
         </tr>
     {% endfor %}
-
 </table>
 </div>
+
+### DENSELY LOCALIZED SUB-SPLITS
+<div>
+    {% for method in site.data.leaderboard %}
+        <div style="overflow-x: scroll;">
+            <div align="center">
+                <h4>{{method.name}}</h4>
+            </div>
+            <table>
+                <tr>
+                    <!-- <td style="border-bottom: none">&nbsp;</td> -->
+                    <td colspan="9" style="text-align: center; border-bottom: none;"><b>Test Split</b></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"><b>Train split</b></td>
+                    <td style="text-align: center; border-left: 1px solid #dbdbdb;"><b>0</b></td>
+                    <td style="text-align: center; border-left: 1px solid #dbdbdb;"><b>1</b></td>
+                    <td style="text-align: center; border-left: 1px solid #dbdbdb;"><b>2</b></td>
+                    <td style="text-align: center; border-left: 1px solid #dbdbdb;"><b>3</b></td>
+                    <td style="text-align: center; border-left: 1px solid #dbdbdb;"><b>4</b></td>
+                    <td style="text-align: center; border-left: 1px solid #dbdbdb;"><b>5</b></td>
+                    <td style="text-align: center; border-left: 1px solid #dbdbdb;"><b>6</b></td>
+                    <td style="text-align: center; border-left: 1px solid #dbdbdb;"><b>7</b></td>
+                </tr>
+                {% for row in method.sub_splits %}
+                    <tr>
+                    <td style="text-align: center;"><b>{{forloop.index0}}</b></td>
+                    {% for el in row %}
+                        <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{el}}</td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <hr>
+        <br>
+    {% endfor %}
+</div>
+
+
 <br>
 <div align="left">
 * <b>DVGO</b> has been trained and tested with half resolution images due to memory constraints.
