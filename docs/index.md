@@ -230,8 +230,8 @@ Send us your results on the private test set so we can add your method to our le
 To do so, send an e-mail to **info@eyecan.ai** with subject "Scannerf results submission" and the following info:
 
 - The **name**/s of your method/s.
-- A link to a published **paper** describing it/them.
-- A download link with your results for every proposed method, with rendered images for every test set sample. We will compute metrics on those images.
+- A **description** of your method/s.
+- A **download link** with your results for every proposed method, with rendered images for every test set sample. We will compute metrics on those images.
 
 Feel free to ask us any questions!
 
