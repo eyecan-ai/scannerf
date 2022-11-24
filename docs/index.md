@@ -164,6 +164,20 @@ If you use this dataset in your research, please cite the following paper:
 ### DENSELY LOCALIZED SUB-SPLITS
 <div>
     {% for method in site.data.leaderboard %}
+        {% assign min_value = 100 %}
+        {% assign max_value = 0 %}
+        {% for row in method.sub_splits %}
+            {% for el in row %}
+                {% assign el_int = el | plus: 0 %}
+                {% if el_int < min_value %}
+                    {% assign min_value = el_int %}
+                {% endif %}
+                {% if el_int > max_value %}
+                    {% assign max_value = el_int %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        {% assign diff_value = max_value | minus: min_value %}
         <div style="overflow-x: scroll;">
             <div align="center">
                 <h4>{{method.name}}</h4>
@@ -188,7 +202,8 @@ If you use this dataset in your research, please cite the following paper:
                     <tr>
                     <td style="text-align: center;"><b>{{forloop.index0}}</b></td>
                     {% for el in row %}
-                        <td style="text-align: center; border-left: 1px solid #dbdbdb;">{{el}}</td>
+                        {% assign norm_el = el | minus: min_value | divided_by: diff_value | times: 50 %}
+                        <td style="text-align: center; border-left: 1px solid #dbdbdb; background-color:hsla(0, 100%, {{100 | minus: norm_el}}%, 0.5);">{{el}}</td>
                     {% endfor %}
                     </tr>
                 {% endfor %}
