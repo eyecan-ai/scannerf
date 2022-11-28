@@ -7,7 +7,7 @@ layout: default
 <div class="hero has-text-centered" id="paper">
 <div class="myWrapper" markdown="1" align="left">
 
-**[ScanNeRF: a Scalable Benchmark for Neural Radiance Fields]()**
+**[ScanNeRF: a Scalable Benchmark for Neural Radiance Fields](https://arxiv.org/abs/2211.13762)**
 
 ***Luca De Luigi\*, Damiano Bolognini\*, Federico Domeniconi\*, Daniele De Gregorio, Matteo Poggi, Luigi Di Stefano***<br>
 [Eyecan.ai](https://www.eyecan.ai/) *\* Equal contribution*
