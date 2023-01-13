@@ -1,18 +1,18 @@
 - name: Luca De Luigi
   email: luca.deluigi4@unibo.it
-  pic: https://media-exp1.licdn.com/dms/image/C4D03AQFgD4LOJiQ4og/profile-displayphoto-shrink_800_800/0/1642699025866?e=1671062400&v=beta&t=Yf3uKDXiF3WtDNZ78wnNP0yj4IEoYYBHAoeffdc_Prg
+  pic: assets\images\authors\luca_de_luigi.jpeg
 - name: Damiano Bolognini
   email: damiano.bolognini@eyecan.ai
-  pic: https://media-exp1.licdn.com/dms/image/C4E03AQHMFl67uA0syQ/profile-displayphoto-shrink_800_800/0/1654418652656?e=1671062400&v=beta&t=yZXg6X_TbkR58Yrz8176ku2XV5rg1mfO2JS3npLeg-4
+  pic: assets\images\authors\damiano_bolognini.jpeg
 - name: Federico Domeniconi
   email: federico.domeniconi@eyecan.ai
-  pic: https://media-exp1.licdn.com/dms/image/C4D03AQETshE3u4TLlg/profile-displayphoto-shrink_800_800/0/1590655306861?e=1671062400&v=beta&t=pPuCAV-WEblm4w6VixtGTYJkjQeXA7pzaAbjVA9wsMo
+  pic: assets\images\authors\federico_domeniconi.jpeg
 - name: Daniele De Gregorio
   email: daniele.degregorio@eyecan.ai
-  pic: https://media-exp1.licdn.com/dms/image/C4D03AQEJ_ct7xWvq2Q/profile-displayphoto-shrink_800_800/0/1659178616148?e=1670457600&v=beta&t=9SNKc_LPPkf3EwsbjaibUYsJ01keVPcaZEJ8dJ1Jass
+  pic: assets\images\authors\daniele_de_gregorio.jpeg
 - name: Matteo Poggi
   email: m.poggi@unibo.it
-  pic: https://media-exp1.licdn.com/dms/image/C4D03AQHNXKXkUiV-pg/profile-displayphoto-shrink_800_800/0/1646551262540?e=1671062400&v=beta&t=jHiNoRlSOHcQY84PGOikSUJecPThlqFywkGunD0VdrQ
+  pic: assets\images\authors\matteo_poggi.jpeg
 - name: Luigi Di Stefano
   email: luigi.distefano@unibo.it
-  pic: https://www.unibo.it/uniboweb/utils/UserImage.aspx?IdAnagrafica=436068&IdFoto=2e238a26
+  pic: assets\images\authors\luigi_di_stefano.png
